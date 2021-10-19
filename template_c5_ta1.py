@@ -1,4 +1,5 @@
-import pygame,math,random
+# Import 'random' module
+import pygame,math
 
 pygame.init()
 screen = pygame.display.set_mode((400,600))
@@ -6,9 +7,13 @@ screen = pygame.display.set_mode((400,600))
 pygame.display.set_caption("Shooting Spaceship")
 background_image = pygame.image.load("bg2.jpg").convert()
 player_image = pygame.image.load("s4.png").convert_alpha()
-enemy_image = pygame.image.load("e3.png").convert_alpha()
+
+# Load the "e3.png" and name it as 'enemy_image'
+
+
 player=pygame.Rect(200,200,30,30)
 
+# The following lines are commented as it is not required anymore
 #WHITE=(255,255,255)
 #enemy=pygame.Rect(100,100,30,30)
 
@@ -88,6 +93,7 @@ while True:
   newimage=pygame.transform.rotate(player_image,angle) 
   screen.blit(newimage ,player)
   
+  # The following line is commented as it is not required anymore
   #pygame.draw.rect(screen,WHITE,enemy)
 
   pygame.display.update()
