@@ -69,14 +69,14 @@ while True:
    
   # For every 'enemy' in the 'enemies' list do the following
   for enemy in enemies:
-      # Increment x coordinate
+      # Increment x-coordinate with 'xvel[i]'
       enemy.x=enemy.x + xvel[i]
       # Check if x-coordinate is less than -250 or greater than 650 and change direction
       if enemy.x < -250 or enemy.x > 650 :
         xvel[i] = -1*xvel[i]
       # Increment 'i' by '1'
       i+=1    
-      # Display it on the screen and increment 'i'
+      # Display 'enemy_image' on 'enemy' rectangle on the screen
       screen.blit(enemy_image,enemy)  
      
   if forward:
